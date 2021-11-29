@@ -1,0 +1,40 @@
+@import "../../../assets/styles/styles.scss";
+.header {
+  .container {
+    @include content;
+    max-width: 74.5rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    .link {
+      text-decoration: none;
+      color: $mainFontColor;
+      .toCatalog {
+        width: 7.8rem;
+        height: 2.5rem;
+        padding: 0 1.25rem 0 1rem;
+        background: $gold;
+        border: 1.4px solid $gold;
+        box-sizing: border-box;
+        border-radius: 0.25rem;
+        display: flex;
+        align-items: center;
+        .burger {
+          width: 1rem;
+          height: 0.625rem;
+          margin-right: 0.75rem;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+          .dash {
+            display: block;
+            width: 1rem;
+            height: 0;
+            border-bottom: 0.125rem solid $mainFontColor;
+          }
+        }
+      }
+    }
+  }
+}

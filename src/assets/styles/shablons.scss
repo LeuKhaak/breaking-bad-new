@@ -28,3 +28,8 @@
   height: 2rem;
   cursor: pointer;
 }
+@mixin content {
+  width: 90%;
+  max-width: 90rem;
+  margin: 0 auto 0 auto;
+}

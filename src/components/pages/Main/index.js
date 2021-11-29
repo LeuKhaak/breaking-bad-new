@@ -1,14 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import * as styles from "./styles.module.scss";
+//import * as styles from "./styles.module.scss";
+import Header from "src/components/molecules/Header/index";
 
 function Main() {
   return (
-    <section>
-      <Link to="/catalog" className={styles.link}>
-        MAIN. Go to catalog
-      </Link>
-    </section>
+    <>
+      <Header />
+      <div>MAIN</div>
+    </>
   );
 }
 
