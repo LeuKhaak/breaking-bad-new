@@ -1,0 +1,19 @@
+@import "../../../assets/styles/styles.scss";
+
+.cardList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 74.5rem;
+  margin: 0 auto 0 auto;
+  .list {
+    display: flex;
+    flex-wrap: wrap;
+    .link {
+      text-decoration: none;
+      &:not(:nth-child(3n)) {
+        margin-right: 2rem;
+      }
+    }
+  }
+}

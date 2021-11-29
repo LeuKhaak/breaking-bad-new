@@ -1,0 +1,57 @@
+@import "../../../assets/styles/styles.scss";
+.card {
+  margin-bottom: 1.5rem;
+  width: 23.5rem;
+  .person {
+    display: flex;
+    background: $white;
+    box-shadow: 0 0.25rem 0.5rem $shadow;
+    border-radius: 0.25rem;
+
+    .imageTile {
+      width: 7.75rem;
+      height: 7.75rem;
+      margin-right: 1.5rem;
+      border-radius: 0.25rem 0 0 0.25rem;
+      overflow: hidden;
+      .img {
+        width: 100%;
+      }
+    }
+    .inf {
+      display: flex;
+      flex-direction: column;
+      .deceased {
+        @include status;
+        background-color: $bgcDeceased;
+        margin-top: 1rem;
+        color: $mainFontColor;
+      }
+      .alive {
+        @include status;
+        background-color: $bgcAlive;
+        color: $aliveColor;
+        margin-top: 1rem;
+      }
+      .name {
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        font-size: 1rem;
+        color: $mainFontColor;
+      }
+      .birthday {
+        margin-top: 0.5rem;
+        display: block;
+        font-size: 0.75rem;
+        color: $mainFontColor;
+        opacity: 0.4;
+      }
+    }
+  }
+  .noLine {
+    display: none;
+    border-bottom: 1px solid $greyFontColor;
+  }
+}

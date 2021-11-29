@@ -1,0 +1,9 @@
+@import "../../../assets/styles/styles.scss";
+.error {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: $error;
+  padding: 1rem 0;
+}
