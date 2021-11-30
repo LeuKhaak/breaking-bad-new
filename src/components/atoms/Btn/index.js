@@ -1,21 +1,25 @@
 import React from "react";
 import * as styles from "./styles.module.scss";
-//import logo from "../../../assets/images/logo.png";
+import cn from "classnames";
 
-function Btn({ location }) {
+const Btn = ({ location, btnText, icon, btnStyle, type, color, onClick }) => {
+  const classBtn = cn(
+    styles.btn,
+    styles[btnStyle],
+    styles[color],
+    styles[type]
+  );
   return (
     <button
-      className={styles.toCatalog}
-      style={location !== "/catalog" ? { background: "none" } : {}}
+      className={classBtn}
+      style={location && location !== "/catalog" ? { background: "none" } : {}}
+      onClick={onClick}
     >
-      <span className={styles.burger}>
-        <span className={styles.dash}></span>
-        <span className={styles.dash}></span>
-        <span className={styles.dash}></span>
-      </span>
-      <span className={styles.linkText}>Catalog</span>
+      {" "}
+      {icon ? <img className={styles.icon} src={icon} alt="#" /> : ""}
+      <span className={styles.linkText}>{btnText}</span>
     </button>
   );
-}
+};
 
 export default Btn;

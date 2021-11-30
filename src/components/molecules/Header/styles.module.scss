@@ -5,10 +5,12 @@
     max-width: 74.5rem;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 1rem 0;
     .link {
       text-decoration: none;
       color: $mainFontColor;
+      line-height: 0;
     }
   }
 }

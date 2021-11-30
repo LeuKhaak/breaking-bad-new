@@ -3,6 +3,8 @@ import * as styles from "./styles.module.scss";
 import Loader from "src/components/atoms/Loader/index";
 import Error from "src/components/atoms/Error/index";
 import { Link } from "react-router-dom";
+import Btn from "src/components/atoms/Btn/index";
+import arrow from "../../../assets/icons/arrow.svg";
 
 function Card({ personData, getError, loader }) {
   return getError ? (
@@ -13,10 +15,7 @@ function Card({ personData, getError, loader }) {
     <section className={styles.card}>
       <div className={styles.content}>
         <Link to="/catalog" className={styles.link}>
-          <div className={styles.backWrapper}>
-            <span className={styles.arrow}></span>
-            <span className={styles.back}>Back to catalog</span>
-          </div>
+          <Btn btnText="Back to catalog" icon={arrow} />
         </Link>
         <div className={styles.person}>
           <div className={styles.image}>

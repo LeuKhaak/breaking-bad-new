@@ -1,7 +1,8 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import * as styles from "./styles.module.scss";
-import logo from "../../../assets/images/logo.png";
+import { ReactComponent as Logo } from "../../../assets/images/logo.svg";
+import burger from "../../../assets/icons/burger.svg";
 import Btn from "src/components/atoms/Btn/index";
 
 function Header() {
@@ -11,10 +12,15 @@ function Header() {
     <header className={styles.header}>
       <div className={styles.container}>
         <Link to="/" className={styles.link}>
-          <img src={logo} alt="#" />
+          <Logo />
         </Link>
         <Link to="/catalog" className={styles.link}>
-          <Btn location={location} />
+          <Btn
+            location={location}
+            btnText="Catalog"
+            btnStyle="toCatalog"
+            icon={burger}
+          />
         </Link>
       </div>
     </header>
