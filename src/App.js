@@ -3,6 +3,7 @@ import Main from "./components/pages/Main";
 import Catalog from "./components/pages/Catalog";
 import Persona from "./components/pages/Persona";
 import Header from "./components/molecules/Header";
+//import Footer from "./components/molecules/Footer";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
             <Route path="/catalog/" component={Catalog} />
           </div>
         </Switch>
+        {/*<Footer />*/}
       </div>
     </Router>
   );
