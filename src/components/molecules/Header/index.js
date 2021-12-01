@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import * as styles from "./styles.module.scss";
 import { ReactComponent as Logo } from "../../../assets/images/logo.svg";
 import burger from "../../../assets/icons/burger.svg";
-import Btn from "src/components/atoms/Btn/index";
+import Btn from "src/components/atoms/Btn";
 
 function Header() {
   const location = useLocation().pathname;
