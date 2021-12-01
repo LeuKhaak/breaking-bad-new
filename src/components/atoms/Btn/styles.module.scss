@@ -1,0 +1,20 @@
+@import "../../../assets/styles/styles.scss";
+
+.btn {
+  cursor: pointer;
+  padding: 0.65rem 1.25rem;
+  box-sizing: border-box;
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  .icon {
+    margin-right: 0.75rem;
+    width: 1rem;
+  }
+}
+.toCatalog {
+  background: $gold;
+  border: 0.09rem solid $gold;
+}

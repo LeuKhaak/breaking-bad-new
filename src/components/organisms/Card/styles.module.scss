@@ -3,29 +3,14 @@
   padding: 2.5rem 0 10rem 0;
   background-color: $bgcCard;
   .content {
-    margin: 0 auto 0 10rem;
+    margin: 0 auto 0 auto;
+    max-width: 74.5rem;
     .link {
       text-decoration: none;
-      .backWrapper {
-        display: flex;
-        margin-bottom: 3rem;
-        .arrow {
-          display: block;
-          width: 1rem;
-          height: 1rem;
-          margin-right: 0.75rem;
-          background-image: url(../../../assets/icons/arrow.svg);
-          background-repeat: no-repeat;
-          background-position: 0 0;
-        }
-        .back {
-          font-size: 1rem;
-          color: $mainFontColor;
-        }
-      }
     }
     .person {
       display: flex;
+      margin-top: 3rem;
       .image {
         width: 36.5rem;
         height: 36.5rem;
