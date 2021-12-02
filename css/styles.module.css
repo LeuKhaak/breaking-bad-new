@@ -1,0 +1,194 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+.card {
+  padding: 2.5rem 0 10rem 0;
+  background-color: #fbfbfb;
+}
+
+.card .container {
+  width: 90%;
+  max-width: 90rem;
+  margin: 0 auto 0 auto;
+  max-width: 74.5rem;
+}
+
+.card .container .link {
+  text-decoration: none;
+}
+
+.card .container .person {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 3rem;
+}
+
+.card .container .person .image {
+  width: 36.5rem;
+  height: 36.5rem;
+  overflow: hidden;
+}
+
+@media (max-width: 1142px) {
+  .card .container .person .image {
+    width: 28rem;
+    height: 28rem;
+  }
+}
+
+@media (max-width: 871px) {
+  .card .container .person .image {
+    width: 23rem;
+    height: 23rem;
+  }
+}
+
+@media (max-width: 810px) {
+  .card .container .person .image {
+    width: 18rem;
+    height: 18rem;
+  }
+}
+
+@media (max-width: 622px) {
+  .card .container .person .image {
+    width: 13rem;
+    height: 13rem;
+  }
+}
+
+@media (max-width: 465px) {
+  .card .container .person .image {
+    width: 10rem;
+    height: 10rem;
+  }
+}
+
+@media (max-width: 395px) {
+  .card .container .person .image {
+    width: 8rem;
+    height: 8rem;
+  }
+}
+
+@media (max-width: 337px) {
+  .card .container .person .image {
+    width: 6rem;
+    height: 6rem;
+  }
+}
+
+.card .container .person .image .img {
+  width: 100%;
+}
+
+.card .container .inf {
+  margin-left: 2.75rem;
+  max-width: 25rem;
+}
+
+@media (max-width: 1142px) {
+  .card .container .inf {
+    max-width: 18rem;
+  }
+}
+
+@media (max-width: 871px) {
+  .card .container .inf {
+    max-width: 16rem;
+  }
+}
+
+@media (max-width: 810px) {
+  .card .container .inf {
+    margin-left: 1rem;
+  }
+}
+
+@media (max-width: 622px) {
+  .card .container .inf {
+    max-width: 12rem;
+  }
+}
+
+@media (max-width: 465px) {
+  .card .container .inf {
+    max-width: 10rem;
+  }
+}
+
+.card .container .inf .deceased {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 4rem;
+  padding: 0 0.5rem;
+  height: 2rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.1rem;
+  font-variant: small-caps;
+  margin-bottom: 2rem;
+  background-color: rgba(201, 201, 195, 0.5);
+}
+
+.card .container .inf .alive {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 4rem;
+  padding: 0 0.5rem;
+  height: 2rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.1rem;
+  font-variant: small-caps;
+  background-color: rgba(48, 255, 30, 0.2);
+  margin-bottom: 2rem;
+  color: #51e245;
+}
+
+.card .container .inf .name {
+  font-weight: 500;
+  font-size: 2rem;
+  color: #2d2d2d;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 622px) {
+  .card .container .inf .name {
+    font-size: 1.5rem;
+  }
+}
+
+.card .container .inf .birthday,
+.card .container .inf .niсkName,
+.card .container .inf .quote {
+  display: block;
+  font-size: 1rem;
+  color: #a9a9a9;
+}
+
+.card .container .inf .birthday .inner,
+.card .container .inf .niсkName .inner,
+.card .container .inf .quote .inner {
+  color: #2d2d2d;
+}
+
+.card .container .inf .birthday {
+  margin-bottom: 1rem;
+}
+
+.card .container .inf .niсkName {
+  margin-bottom: 2rem;
+}

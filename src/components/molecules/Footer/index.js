@@ -7,8 +7,8 @@ function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
-        <div>{year}</div>
-        <div>@autor</div>
+        <div className={styles.footerText}>{year}</div>
+        <div className={styles.footerText}>@autor</div>
       </div>
     </footer>
   );

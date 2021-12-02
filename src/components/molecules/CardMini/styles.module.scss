@@ -2,6 +2,12 @@
 .card {
   margin-bottom: 1.5rem;
   width: 23.5rem;
+  @include mobileSmall {
+    width: 20rem;
+  }
+  @include mobileSmallSecond {
+    width: 19rem;
+  }
   .person {
     display: flex;
     background: $white;

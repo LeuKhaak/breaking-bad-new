@@ -1,7 +1,10 @@
 @import "../../../assets/styles/styles.scss";
 
 .wrapper {
+  font-size: 0;
   .image {
     width: 100%;
+    height: calc(100vh - 10rem);
+    object-fit: cover;
   }
 }

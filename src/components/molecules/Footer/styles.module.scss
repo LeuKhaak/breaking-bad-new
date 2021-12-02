@@ -6,5 +6,10 @@
     display: flex;
     justify-content: space-between;
     padding: 1.75rem 0;
+    .footerText {
+      height: 1.5rem;
+      display: flex;
+      align-items: center;
+    }
   }
 }

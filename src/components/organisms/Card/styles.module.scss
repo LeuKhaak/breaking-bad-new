@@ -2,8 +2,8 @@
 .card {
   padding: 2.5rem 0 10rem 0;
   background-color: $bgcCard;
-  .content {
-    margin: 0 auto 0 auto;
+  .container {
+    @include content;
     max-width: 74.5rem;
     .link {
       text-decoration: none;
@@ -15,6 +15,34 @@
         width: 36.5rem;
         height: 36.5rem;
         overflow: hidden;
+        @include tabletLandscape {
+          width: 28rem;
+          height: 28rem;
+        }
+        @include tabletSmall {
+          width: 23rem;
+          height: 23rem;
+        }
+        @include tabletSmallSecond {
+          width: 18rem;
+          height: 18rem;
+        }
+        @include mobile {
+          width: 13rem;
+          height: 13rem;
+        }
+        @include mobileSecond {
+          width: 10rem;
+          height: 10rem;
+        }
+        @include mobileSmall {
+          width: 8rem;
+          height: 8rem;
+        }
+        @include mobileSmallSecond {
+          width: 6rem;
+          height: 6rem;
+        }
         .img {
           width: 100%;
         }
@@ -22,7 +50,22 @@
     }
     .inf {
       margin-left: 2.75rem;
-      width: 25rem;
+      max-width: 25rem;
+      @include tabletLandscape {
+        max-width: 18rem;
+      }
+      @include tabletSmall {
+        max-width: 16rem;
+      }
+      @include tabletSmallSecond {
+        margin-left: 1rem;
+      }
+      @include mobile {
+        max-width: 12rem;
+      }
+      @include mobileSecond {
+        max-width: 10rem;
+      }
       .deceased {
         @include status;
         margin-bottom: 2rem;
@@ -39,6 +82,9 @@
         font-size: 2rem;
         color: $mainFontColor;
         margin-bottom: 1rem;
+        @include mobile {
+          font-size: 1.5rem;
+        }
       }
       .birthday,
       .niсkName,
