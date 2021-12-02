@@ -4,6 +4,12 @@
   }
 }
 
+@mixin desktopSmall {
+  @media (max-width: 1290px) {
+    @content;
+  }
+}
+
 @mixin tabletLandscape {
   @media (max-width: 1142px) {
     @content;
@@ -11,7 +17,7 @@
 }
 
 @mixin tabletSmall {
-  @media (max-width: 871px) {
+  @media (max-width: 872px) {
     @content;
   }
 }

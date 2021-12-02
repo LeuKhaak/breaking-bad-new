@@ -2,55 +2,36 @@
 
 .cardList {
   background-color: $bgcCard;
+  min-height: calc(100vh - 10rem);
   .container {
     @include content;
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 74.5rem;
-    @include desktop {
-      max-width: 49rem;
-    }
     @include tabletSmall {
       width: 95%;
-      max-width: 48rem;
-    }
-    @include tabletSmallSecond {
-      max-width: 23.5rem;
     }
     .list {
-      display: flex;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 1.5rem 2rem;
+      @include desktop {
+        grid-gap: 1.5rem 1rem;
+      }
+      @include desktopSmall {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1.5rem 2rem;
+      }
+      @include tabletSmall {
+        grid-gap: 1.5rem 1rem;
+      }
       @include tabletSmallSecond {
-        justify-content: center;
+        grid-template-columns: 1fr;
+        grid-gap: 1.5rem;
       }
       .link {
         text-decoration: none;
-        &:not(:nth-child(3n)) {
-          margin-right: 2rem;
-        }
-        @include desktop {
-          &:not(:nth-child(3n)) {
-            margin-right: 0;
-          }
-          &:not(:nth-child(2n)) {
-            margin-right: 2rem;
-          }
-        }
-        @include tabletSmall {
-          &:not(:nth-child(2n)) {
-            margin-right: 1rem;
-          }
-        }
-        @include tabletSmallSecond {
-          &:not(:nth-child(2n)) {
-            margin-right: 0;
-          }
-        }
       }
     }
   }
-}
-
-@include desktop {
 }

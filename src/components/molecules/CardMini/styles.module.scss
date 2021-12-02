@@ -1,12 +1,11 @@
 @import "../../../assets/styles/styles.scss";
 .card {
-  margin-bottom: 1.5rem;
   width: 23.5rem;
   @include mobileSmall {
     width: 20rem;
   }
   @include mobileSmallSecond {
-    width: 19rem;
+    width: 18.5rem;
   }
   .person {
     display: flex;
