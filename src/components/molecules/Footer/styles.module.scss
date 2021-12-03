@@ -1,0 +1,15 @@
+@import "../../../assets/styles/styles.scss";
+.footer {
+  .container {
+    @include content;
+    max-width: 74.5rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.75rem 0;
+    .footerText {
+      height: 1.5rem;
+      display: flex;
+      align-items: center;
+    }
+  }
+}

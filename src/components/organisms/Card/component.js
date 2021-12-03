@@ -13,7 +13,7 @@ function Card({ personData, getError, loader }) {
     <Loader />
   ) : personData ? (
     <section className={styles.card}>
-      <div className={styles.content}>
+      <div className={styles.container}>
         <Link to="/catalog" className={styles.link}>
           <Btn btnText="Back to catalog" icon={arrow} />
         </Link>

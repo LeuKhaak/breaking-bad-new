@@ -15,7 +15,6 @@ const Btn = ({ location, btnText, icon, btnStyle, type, color, onClick }) => {
       style={location && location !== "/catalog" ? { background: "none" } : {}}
       onClick={onClick}
     >
-      {" "}
       {icon ? <img className={styles.icon} src={icon} alt="#" /> : ""}
       <span className={styles.linkText}>{btnText}</span>
     </button>
