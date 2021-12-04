@@ -2,6 +2,7 @@ import {
   PERSON_DATA,
   PERSON_ERROR,
   PERSON_LOADER,
+  CLEAR_PERSON_DATA,
 } from "../actionTypes/actionTypesNames";
 import Repository from "../../repository";
 
@@ -15,6 +16,10 @@ export function personError(value) {
 
 export function personData(value) {
   return { type: PERSON_DATA, personData: value };
+}
+
+export function clearPersonData() {
+  return { type: CLEAR_PERSON_DATA, personData: "" };
 }
 
 export const getPersonData = (id) => async (dispatch) => {

@@ -1,7 +1,10 @@
 import { useSelector, useDispatch } from "react-redux";
 import { React, useEffect } from "react";
-import { getPersonData } from "../../../store/actions/personDetails";
-import { getQuoteData } from "src/store/actions/quote";
+import {
+  getPersonData,
+  clearPersonData,
+} from "../../../store/actions/personDetails";
+import { getQuoteData, clearQuoteData } from "src/store/actions/quote";
 import CardList from "./component";
 import { useLocation } from "react-router-dom";
 
@@ -17,24 +20,25 @@ function CardContainer() {
   const quoteError = useSelector((state) => state.quote.quoteError);
   const quoteLoader = useSelector((state) => state.quote.quoteLoader);
 
-  const quoteName =
-    personData && personData.name ? personData.name.split(" ")[0] : "";
-  const quoteSurname =
-    personData && personData.name ? personData.name.split(" ")[1] : "";
+  const quote = personData && personData.name ? quoteData : "";
 
   useEffect(() => {
     dispatch(getPersonData(location));
+    return () => {
+      dispatch(clearPersonData());
+      dispatch(clearQuoteData());
+    };
   }, [dispatch, location]);
 
   useEffect(() => {
-    if (personData !== "") {
-      dispatch(getQuoteData(quoteName, quoteSurname));
+    if (personData && personData.name) {
+      dispatch(getQuoteData(personData.name));
     }
-  }, [dispatch, personData, quoteName, quoteSurname]);
+  }, [dispatch, personData]);
 
   return (
     <CardList
-      quoteData={quoteData}
+      quoteData={quote}
       quoteLoader={quoteLoader}
       quoteError={quoteError}
       personData={personData}

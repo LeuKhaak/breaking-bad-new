@@ -2,10 +2,11 @@ import {
   QUOTE_DATA,
   QUOTE_ERROR,
   QUOTE_LOADER,
+  CLEAR_QUOTE_DATA,
 } from "../actionTypes/actionTypesNames";
 
 const initialState = {
-  randomQuote: "QQQ",
+  randomQuote: "",
   quoteLoader: false,
   quoteError: null,
 };
@@ -13,6 +14,11 @@ const initialState = {
 function loadQuote(state = initialState, action) {
   switch (action.type) {
     case QUOTE_DATA:
+      return {
+        ...state,
+        randomQuote: action.randomQuote,
+      };
+    case CLEAR_QUOTE_DATA:
       return {
         ...state,
         randomQuote: action.randomQuote,

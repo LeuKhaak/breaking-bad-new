@@ -1,14 +1,14 @@
 import axios from "axios";
 
 class getQuote {
-  getRandomQuote = async (name, surname) => {
+  getRandomQuote = async (name) => {
     const result = {
       value: null,
       error: null,
     };
     try {
       const response = await axios.get(
-        `https://www.breakingbadapi.com/api/quote/random?author=${name}+${surname}`
+        `https://www.breakingbadapi.com/api/quote/random?author=${name}`
       );
       result.value = response.data.length
         ? response.data[0].quote

@@ -2,6 +2,7 @@ import {
   PERSON_DATA,
   PERSON_ERROR,
   PERSON_LOADER,
+  CLEAR_PERSON_DATA,
 } from "../actionTypes/actionTypesNames";
 
 const initialState = {
@@ -16,6 +17,11 @@ function loadPerson(state = initialState, action) {
       return {
         ...state,
         personData: action.personData,
+      };
+    case CLEAR_PERSON_DATA:
+      return {
+        ...state,
+        personData: "",
       };
     case PERSON_LOADER:
       return {
