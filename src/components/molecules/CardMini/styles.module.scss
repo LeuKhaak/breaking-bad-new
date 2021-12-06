@@ -26,7 +26,6 @@
     .inf {
       display: flex;
       flex-direction: column;
-      align-items: center;
       .deceased {
         @include status;
         padding: 0;
