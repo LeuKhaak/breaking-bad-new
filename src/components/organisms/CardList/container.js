@@ -8,6 +8,7 @@ function CardListContainer() {
   const dispatch = useDispatch();
 
   const cardsData = useSelector((state) => state.cards.cardList);
+  const tiles = useSelector((state) => state.cards.tiles);
   const getError = useSelector((state) => state.cards.getError);
   const loader = useSelector((state) => state.cards.loader);
 
@@ -16,7 +17,14 @@ function CardListContainer() {
     dispatch(getStartData());
   }, [dispatch]);
 
-  return <CardList cardsData={cardsData} getError={getError} loader={loader} />;
+  return (
+    <CardList
+      cardsData={cardsData}
+      getError={getError}
+      loader={loader}
+      tiles={tiles}
+    />
+  );
 }
 
 export const container = CardListContainer;

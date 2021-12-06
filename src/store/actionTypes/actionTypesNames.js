@@ -1,6 +1,7 @@
 export const START_DATA = "CARD_LIST_DATA";
 export const GET_ERROR = "GET_ERROR";
 export const SHOW_LOADER = "SHOW_LOADER";
+export const CHANGE_STYLE = "CHANGE_STYLE";
 
 export const PERSON_DATA = "PERSON_DATA";
 export const CLEAR_PERSON_DATA = "CLEAR_PERSON_DATA";

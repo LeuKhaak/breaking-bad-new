@@ -12,7 +12,7 @@
     background: $white;
     box-shadow: 0 0.25rem 0.5rem $shadow;
     border-radius: 0.25rem;
-
+    padding: 0.5rem 0;
     .imageTile {
       width: 7.75rem;
       height: 7.75rem;
@@ -28,20 +28,23 @@
       flex-direction: column;
       .deceased {
         @include status;
+        padding: 0;
+        margin-right: 8.75rem;
+        text-align: center;
         background-color: $bgcDeceased;
         margin-top: 1rem;
         color: $mainFontColor;
       }
       .alive {
         @include status;
+        padding: 0;
+        margin-right: 8.75rem;
         background-color: $bgcAlive;
         color: $aliveColor;
         margin-top: 1rem;
       }
       .name {
         margin-top: 1rem;
-        display: flex;
-        align-items: center;
         font-weight: 500;
         font-size: 1rem;
         color: $mainFontColor;
@@ -55,8 +58,114 @@
       }
     }
   }
-  .noLine {
-    display: none;
-    border-bottom: 0.0625rem solid $greyFontColor;
+}
+.cardLine {
+  width: 74.5rem;
+  border-bottom: 0.0625rem solid $greyFontColor;
+  @include desktop {
+    width: 72.5rem;
+  }
+  @include desktopSmall {
+    width: 64rem;
+  }
+  @include tabletLandscape {
+    width: 49rem;
+  }
+  @include tabletSmall {
+    width: 48rem;
+  }
+  @include tabletSmallSecond {
+    width: 36.5rem;
+  }
+  @include mobile {
+    width: 27.5rem;
+  }
+  @include mobileSecond {
+    width: 23rem;
+  }
+  @include mobileSmall {
+    width: 18rem;
+  }
+  .person {
+    background: none;
+    box-shadow: none;
+    @include mobileSecond {
+      flex-direction: column-reverse;
+    }
+    .imageTile {
+      width: 4rem;
+      height: 4rem;
+      margin-right: 2.5rem;
+      @include tabletSmallSecond {
+        margin-right: 1.5rem;
+      }
+      @include mobileSecond {
+        margin-right: 0;
+        margin: 0.5rem auto 0 auto;
+        display: flex;
+        justify-content: center;
+      }
+    }
+    .inf {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      @include mobileSecond {
+        justify-content: space-between;
+      }
+      .deceased {
+        @include status;
+        padding: 0;
+        margin-right: 8.75rem;
+        text-align: center;
+        margin-top: 0rem;
+        @include tabletSmallSecond {
+          margin-right: 3rem;
+        }
+        @include mobile {
+          margin-right: 2rem;
+        }
+        @include mobileSecond {
+          margin-right: 0;
+        }
+      }
+      .alive {
+        @include status;
+        padding: 0;
+        margin-right: 8.75rem;
+        margin-top: 0;
+        @include tabletSmallSecond {
+          margin-right: 3rem;
+        }
+        @include mobile {
+          margin-right: 2rem;
+        }
+        @include mobileSecond {
+          margin-right: 0;
+        }
+      }
+      .name {
+        margin-top: 0;
+        width: 9rem;
+        margin-right: 9.25rem;
+        display: flex;
+        align-items: center;
+        @include tabletSmallSecond {
+          margin-right: 4rem;
+          width: auto;
+        }
+        @include mobile {
+          margin-right: 1.5rem;
+        }
+        @include mobileSecond {
+          margin-right: 0;
+        }
+      }
+      .birthday {
+        margin-top: 0;
+        display: flex;
+        align-items: center;
+      }
+    }
   }
 }

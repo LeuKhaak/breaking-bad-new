@@ -1,0 +1,19 @@
+@import "../../../assets/styles/styles.scss";
+.container {
+  @include content;
+  max-width: 74.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+  .title {
+    font-weight: 500;
+    font-size: 32px;
+  }
+  .toggleWrapper {
+    width: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

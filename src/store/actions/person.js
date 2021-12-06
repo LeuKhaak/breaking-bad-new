@@ -2,6 +2,7 @@ import {
   START_DATA,
   GET_ERROR,
   SHOW_LOADER,
+  CHANGE_STYLE,
 } from "../actionTypes/actionTypesNames";
 import Repository from "../../repository";
 
@@ -15,6 +16,10 @@ export function getError(value) {
 
 export function startData(value) {
   return { type: START_DATA, cardList: value };
+}
+
+export function changeStyle(value) {
+  return { type: CHANGE_STYLE, tiles: value };
 }
 
 export const getStartData = () => async (dispatch) => {

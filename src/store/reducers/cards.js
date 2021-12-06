@@ -2,10 +2,12 @@ import {
   START_DATA,
   GET_ERROR,
   SHOW_LOADER,
+  CHANGE_STYLE,
 } from "../actionTypes/actionTypesNames";
 
 const initialState = {
   cardList: [],
+  tiles: true,
   loader: false,
   getError: null,
 };
@@ -16,6 +18,11 @@ function loadCards(state = initialState, action) {
       return {
         ...state,
         cardList: action.cardList,
+      };
+    case CHANGE_STYLE:
+      return {
+        ...state,
+        tiles: action.tiles,
       };
     case SHOW_LOADER:
       return {
