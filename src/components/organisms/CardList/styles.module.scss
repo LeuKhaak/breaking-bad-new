@@ -1,7 +1,6 @@
 @import "../../../assets/styles/styles.scss";
 
 .cardList {
-  background-color: $bgcCard;
   min-height: calc(100vh - 10rem);
   .container {
     @include content;
@@ -10,6 +9,70 @@
     align-items: center;
     @include tabletSmall {
       width: 95%;
+    }
+    .noHeadersLine {
+      display: none;
+    }
+    .headersLine {
+      padding-bottom: 1.5rem;
+      width: 74.5rem;
+      border-bottom: 0.0625rem solid $greyFontColor;
+      font-size: 0.875rem;
+      @include desktop {
+        width: 72.5rem;
+      }
+      @include desktopSmall {
+        width: 64rem;
+      }
+      @include tabletLandscape {
+        width: 49rem;
+      }
+      @include tabletSmall {
+        width: 48rem;
+      }
+      @include tabletSmallSecond {
+        width: 36.5rem;
+      }
+      @include mobile {
+        width: 27.5rem;
+      }
+      @include mobileSecond {
+        width: 23rem;
+        display: flex;
+        justify-content: space-between;
+      }
+      @include mobileSmall {
+        width: 18rem;
+      }
+      .status {
+        margin: 0 10.25rem 0 6.5rem;
+        @include tabletSmallSecond {
+          margin: 0 4.5rem 0 5.5rem;
+        }
+        @include mobile {
+          margin: 0 3.5rem 0 5.5rem;
+        }
+        @include mobileSecond {
+          margin: 0;
+        }
+      }
+      .name {
+        margin-right: 15.95rem;
+        @include tabletSmallSecond {
+          margin-right: 10.75rem;
+        }
+        @include mobile {
+          margin-right: 8.25rem;
+        }
+        @include mobileSecond {
+          margin-right: 0;
+        }
+      }
+    }
+    .listLines {
+      .link {
+        text-decoration: none;
+      }
     }
     .list {
       display: grid;

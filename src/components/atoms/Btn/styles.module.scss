@@ -18,3 +18,30 @@
   background: $gold;
   border: 0.09rem solid $gold;
 }
+
+.toggle {
+  padding: 0;
+  .icon {
+    cursor: pointer;
+    margin-right: 0;
+    width: 1.5rem;
+  }
+}
+.pageNumber {
+  @include pageButton;
+  padding: 0;
+}
+
+.pageNumberChecked {
+  @include pageButton;
+  padding: 0;
+  color: $gold;
+  background: $white;
+  box-shadow: 0 0.25rem 0.5rem $shadowDark;
+  border-radius: 0.25rem;
+}
+
+.buttonNext {
+  @include pageButton;
+  transform: rotateY(180deg);
+}
