@@ -6,7 +6,14 @@ import { Link } from "react-router-dom";
 import Btn from "src/components/atoms/Btn";
 import arrow from "../../../assets/icons/arrow.svg";
 
-function Card({ personData, getError, loader }) {
+function Card({
+  personData,
+  getError,
+  loader,
+  quoteData,
+  quoteError,
+  quoteLoader,
+}) {
   return getError ? (
     <Error notice="Character not found!" />
   ) : loader ? (
@@ -33,21 +40,23 @@ function Card({ personData, getError, loader }) {
             </span>
             <h3 className={styles.name}>{personData.name}</h3>
             <span className={styles.birthday}>
-              Birthday:{" "}
+              Birthday:
               <span className={styles.inner}>{personData.birthday}</span>
             </span>
             <span className={styles.niсkName}>
-              Niсk-name:{" "}
+              Niсk-name:
               <span className={styles.inner}>{personData.nickname}</span>
             </span>
-            <span className={styles.quote}>
-              <span className={styles.quoteLabel}>Quote: </span>
-              <span className={styles.inner}>
-                Lorem ipsum odor amet, consectetuer adipiscing elit. Vestibulum
-                nec mi felis fames hendrerit per. Natoque sem enim, phasellus ac
-                ultrices fames. Orci mus magna.
+            {quoteError ? (
+              <Error />
+            ) : quoteLoader ? (
+              <Loader />
+            ) : (
+              <span className={styles.quote}>
+                <span className={styles.quoteLabel}>Quote:</span>
+                <span className={styles.inner}>{quoteData}</span>
               </span>
-            </span>
+            )}
           </div>
         </div>
       </div>
