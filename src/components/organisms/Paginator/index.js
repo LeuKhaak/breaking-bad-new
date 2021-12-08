@@ -1,11 +1,15 @@
 import React from "react";
+import { useSelector, useDispatch } from "react-redux";
 import * as styles from "./styles.module.scss";
 import Btn from "src/components/atoms/Btn";
 import arrow from "../../../assets/icons/arrow.svg";
 
 function Paginator() {
-  const amountOnPage = 10;
-  const p = Math.ceil(62 / amountOnPage);
+  const currentPage = useSelector((state) => state.paginator.currentPage);
+  const perPage = useSelector((state) => state.paginator.perPage);
+
+  //console.log(currentPage);
+  const p = Math.ceil(62 / perPage);
   const pages = [];
   for (let i = 1; i <= p; i++) {
     pages.push(i);
@@ -49,7 +53,9 @@ function Paginator() {
             <div key={el} className={styles.pageLabel}>
               <Btn
                 btnText={el}
-                btnStyle={el === 1 ? "pageNumberChecked" : "pageNumber"}
+                btnStyle={
+                  el === currentPage ? "pageNumberChecked" : "pageNumber"
+                }
                 disp={displayPageNumber(el)}
               />
               <Btn
