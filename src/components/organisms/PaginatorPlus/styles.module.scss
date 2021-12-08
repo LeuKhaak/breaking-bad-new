@@ -1,0 +1,8 @@
+@import "../../../assets/styles/styles.scss";
+.container {
+  @include content;
+  width: 74.5rem;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 3rem;
+}

@@ -4,6 +4,7 @@ import cn from "classnames";
 
 const Btn = ({
   location,
+  disp,
   btnText,
   icon,
   btnStyle,
@@ -24,7 +25,10 @@ const Btn = ({
   return (
     <button
       className={classBtn}
-      style={location && location !== "/catalog" ? { background: "none" } : {}}
+      style={
+        (location && location !== "/catalog" ? { background: "none" } : {},
+        { display: disp })
+      }
       onClick={() => {
         onClick1();
       }}
