@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import * as styles from "./styles.module.scss";
 import Btn from "src/components/atoms/Btn";
 import arrow from "../../../assets/icons/arrow.svg";
-import selectPage from "src/store/reducers/paginator";
+import { selectPage, prevPage, nextPage } from "src/store/actions/paginator";
 
 function Paginator() {
   const dispatch = useDispatch();
@@ -11,7 +11,6 @@ function Paginator() {
   const currentTriad = useSelector((state) => state.paginator.currentTriad);
   const perPage = useSelector((state) => state.paginator.perPage);
 
-  //console.log(currentPage);
   const p = Math.ceil(62 / perPage);
   const pages = [];
   let t = 1;
@@ -22,8 +21,6 @@ function Paginator() {
     if (i === 1 || i % 3 === 0) d = true;
     else d = false;
   }
-
-  //console.log(pages);
 
   const displayPageNumber = (elem) => {
     let disp = "";
@@ -60,9 +57,25 @@ function Paginator() {
     return disp;
   };
 
-  const select = (val) => {
-    dispatch(selectPage(val));
+  const select = (val1, val2) => {
+    dispatch(selectPage(val1, val2));
   };
+
+  const prev = (val1, val2) => {
+    dispatch(prevPage(val1, val2));
+  };
+  const prevP = currentPage > 1 ? currentPage - 1 : currentPage;
+  const prevTriad =
+    currentPage > 3 && (currentPage - 1) % 3 === 0
+      ? currentTriad - 1
+      : currentTriad;
+
+  const next = (val1, val2) => {
+    dispatch(nextPage(val1, val2));
+  };
+  const nextP = currentPage < p ? currentPage + 1 : currentPage;
+  const nextTriad =
+    currentPage < p && currentPage % 3 === 0 ? currentTriad + 1 : currentTriad;
 
   return (
     <div className={styles.numbers}>
@@ -91,8 +104,20 @@ function Paginator() {
             </div>
           ))}
       </div>
-      <Btn icon={arrow} btnStyle="pageNumber" />
-      <Btn icon={arrow} btnStyle="buttonNext" />
+      <Btn
+        icon={arrow}
+        btnStyle="pageNumber"
+        onClick={prev}
+        arg={prevP}
+        arg2={prevTriad}
+      />
+      <Btn
+        icon={arrow}
+        btnStyle="buttonNext"
+        onClick={next}
+        arg={nextP}
+        arg2={nextTriad}
+      />
     </div>
   );
 }
