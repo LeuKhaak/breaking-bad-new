@@ -12,6 +12,7 @@ const Btn = ({
   color,
   onClick,
   arg,
+  arg2,
 }) => {
   const classBtn = cn(
     styles.btn,
@@ -20,7 +21,7 @@ const Btn = ({
     styles[type]
   );
   const onClick1 = () => {
-    if (onClick) onClick(arg);
+    if (onClick) onClick(arg, arg2);
   };
   return (
     <button

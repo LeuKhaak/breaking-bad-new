@@ -2,6 +2,7 @@ import { SELECT_PAGE } from "../actionTypes/actionTypesNames";
 
 const initialState = {
   currentPage: 1,
+  currentTriad: 1,
   perPage: 10,
 };
 
