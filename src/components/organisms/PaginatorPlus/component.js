@@ -3,7 +3,7 @@ import * as styles from "./styles.module.scss";
 import Paginator from "src/components/organisms/Paginator";
 import ForPaginator from "src/components/molecules/ForPaginator";
 
-function PaginatorPlus({ loader, perPage, amounts, changeL }) {
+function PaginatorPlus({ loader, perPage, amounts, changeLimitPages }) {
   return (
     <div className={styles.container} style={loader ? { display: "none" } : {}}>
       <Paginator />
@@ -11,7 +11,7 @@ function PaginatorPlus({ loader, perPage, amounts, changeL }) {
         loader={loader}
         perPage={perPage}
         amounts={amounts}
-        changeL={changeL}
+        changeLimitPages={changeLimitPages}
       />
     </div>
   );

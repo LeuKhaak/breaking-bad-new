@@ -9,7 +9,7 @@ function PaginatorPlusContainer() {
   const perPage = useSelector((state) => state.paginator.perPage);
   const amounts = [5, 10, 15, 20];
 
-  const changeL = (val) => {
+  const changeLimitPages = (val) => {
     dispatch(changeLimit(val));
   };
   return (
@@ -17,7 +17,7 @@ function PaginatorPlusContainer() {
       loader={loader}
       perPage={perPage}
       amounts={amounts}
-      changeL={changeL}
+      changeLimitPages={changeLimitPages}
     />
   );
 }

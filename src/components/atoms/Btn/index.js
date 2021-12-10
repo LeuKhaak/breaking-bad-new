@@ -27,8 +27,9 @@ const Btn = ({
     <button
       className={classBtn}
       style={
-        (location && location !== "/catalog" ? { background: "none" } : {},
-        { display: disp })
+        location && location !== "/catalog"
+          ? { background: "none" }
+          : { display: disp }
       }
       onClick={() => {
         onClick1();

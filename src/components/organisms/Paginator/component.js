@@ -9,11 +9,11 @@ function Paginator({
   displayPageNumber,
   displayPageDots,
   select,
-  prev,
-  prevP,
+  goPrevPage,
+  previousPage,
   prevTriad,
-  next,
-  nextP,
+  goNextPage,
+  followingPage,
   nextTriad,
 }) {
   return (
@@ -46,15 +46,15 @@ function Paginator({
       <Btn
         icon={arrow}
         btnStyle="pageNumber"
-        onClick={prev}
-        arg={prevP}
+        onClick={goPrevPage}
+        arg={previousPage}
         arg2={prevTriad}
       />
       <Btn
         icon={arrow}
         btnStyle="buttonNext"
-        onClick={next}
-        arg={nextP}
+        onClick={goNextPage}
+        arg={followingPage}
         arg2={nextTriad}
       />
     </div>
