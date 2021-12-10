@@ -1,8 +1,8 @@
 import { useSelector, useDispatch } from "react-redux";
 import { React, useEffect } from "react";
 import CardList from "./component";
-import { getStartData } from "../../../store/actions/person";
-import { getQuoteData } from "../../../store/actions/quote";
+import { getStartData } from "src/store/actions/person";
+import { getQuoteData } from "src/store/actions/quote";
 
 function CardListContainer() {
   const dispatch = useDispatch();
@@ -12,10 +12,14 @@ function CardListContainer() {
   const getError = useSelector((state) => state.cards.getError);
   const loader = useSelector((state) => state.cards.loader);
 
+  const currentPage = useSelector((state) => state.paginator.currentPage);
+  const limit = useSelector((state) => state.paginator.perPage);
+  const offset = limit * (currentPage - 1);
+
   useEffect(() => {
     dispatch(getQuoteData(""));
-    dispatch(getStartData());
-  }, [dispatch]);
+    dispatch(getStartData(limit, offset));
+  }, [dispatch, limit, offset]);
 
   return (
     <CardList

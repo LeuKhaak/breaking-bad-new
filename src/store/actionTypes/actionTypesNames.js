@@ -12,3 +12,8 @@ export const QUOTE_DATA = "QUOTE_DATA";
 export const CLEAR_QUOTE_DATA = "CLEAR_QUOTE_DATA";
 export const QUOTE_ERROR = "QUOTE_ERROR";
 export const QUOTE_LOADER = "QUOTE_LOADER";
+
+export const SELECT_PAGE = "SELECT_PAGE";
+export const PREV_PAGE = "PREV_PAGE";
+export const NEXT_PAGE = "NEXT_PAGE";
+export const CHANGE_LIMIT = "CHANGE_LIMIT";

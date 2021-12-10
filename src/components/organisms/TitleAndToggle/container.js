@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { changeStyle } from "../../../store/actions/person";
+import { changeStyle } from "src/store/actions/person";
 import TitleAndToggle from "./component";
 
 function TitleAndToggleContainer() {

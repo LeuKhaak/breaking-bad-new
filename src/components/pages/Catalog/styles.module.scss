@@ -2,4 +2,5 @@
 .catalog {
   background-color: $bgcCard;
   padding: 5rem 0 2.75rem 0;
+  min-height: calc(100vh - 10rem);
 }

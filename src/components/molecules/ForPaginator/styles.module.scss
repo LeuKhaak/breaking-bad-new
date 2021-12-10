@@ -1,0 +1,16 @@
+@import "../../../assets/styles/styles.scss";
+.amount {
+  display: flex;
+  align-items: center;
+  @include mobile {
+    margin-bottom: 1.5rem;
+  }
+  .show {
+    display: block;
+    margin-right: 1rem;
+  }
+  .pages {
+    display: flex;
+    align-items: center;
+  }
+}

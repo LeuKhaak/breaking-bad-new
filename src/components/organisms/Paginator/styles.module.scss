@@ -1,0 +1,14 @@
+@import "../../../assets/styles/styles.scss";
+
+.numbers {
+  display: flex;
+  align-items: center;
+  .pages {
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+    @include mobileSmall {
+      margin-right: 0.5rem;
+    }
+  }
+}

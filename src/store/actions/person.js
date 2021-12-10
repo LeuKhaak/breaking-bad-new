@@ -22,9 +22,12 @@ export function changeStyle(value) {
   return { type: CHANGE_STYLE, tiles: value };
 }
 
-export const getStartData = () => async (dispatch) => {
+export const getStartData = (limit, offset) => async (dispatch) => {
   dispatch(showLoader(true));
-  const { value, error } = await Repository.APIstartData.getPersons();
+  const { value, error } = await Repository.APIstartData.getPersons(
+    limit,
+    offset
+  );
   if (error || !value) {
     dispatch(getError(true));
     dispatch(showLoader(false));
