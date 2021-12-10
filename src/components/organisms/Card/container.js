@@ -3,7 +3,7 @@ import { React, useEffect } from "react";
 import {
   getPersonData,
   clearPersonData,
-} from "../../../store/actions/personDetails";
+} from "src/store/actions/personDetails";
 import { getQuoteData, clearQuoteData } from "src/store/actions/quote";
 import CardList from "./component";
 import { useLocation } from "react-router-dom";

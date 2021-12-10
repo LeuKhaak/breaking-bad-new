@@ -4,7 +4,7 @@ import Loader from "src/components/atoms/Loader";
 import Error from "src/components/atoms/Error";
 import { Link } from "react-router-dom";
 import Btn from "src/components/atoms/Btn";
-import arrow from "../../../assets/icons/arrow.svg";
+import arrow from "src/assets/icons/arrow.svg";
 
 function Card({
   personData,

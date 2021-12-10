@@ -2,6 +2,9 @@
 .amount {
   display: flex;
   align-items: center;
+  @include mobile {
+    margin-bottom: 1.5rem;
+  }
   .show {
     display: block;
     margin-right: 1rem;

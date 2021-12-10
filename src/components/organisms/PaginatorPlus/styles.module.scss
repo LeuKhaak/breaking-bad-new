@@ -1,8 +1,12 @@
 @import "../../../assets/styles/styles.scss";
 .container {
   @include content;
-  width: 74.5rem;
+  max-width: 74.5rem;
   display: flex;
   justify-content: space-between;
-  padding-top: 3rem;
+  margin-top: 3.5rem;
+  @include mobile {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
 }

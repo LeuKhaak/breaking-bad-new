@@ -1,8 +1,8 @@
 import { useSelector, useDispatch } from "react-redux";
 import { React, useEffect } from "react";
 import CardList from "./component";
-import { getStartData } from "../../../store/actions/person";
-import { getQuoteData } from "../../../store/actions/quote";
+import { getStartData } from "src/store/actions/person";
+import { getQuoteData } from "src/store/actions/quote";
 
 function CardListContainer() {
   const dispatch = useDispatch();
