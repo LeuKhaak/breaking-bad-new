@@ -1,7 +1,7 @@
 import axios from "axios";
 
 class getPersonByName {
-  getPerson = async (name) => {
+  searchPerson = async (name) => {
     const result = {
       value: null,
       error: null,

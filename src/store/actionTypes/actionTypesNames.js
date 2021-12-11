@@ -20,3 +20,6 @@ export const CHANGE_LIMIT = "CHANGE_LIMIT";
 
 export const SEARCH_NAME = "SEARCH_NAME";
 export const SEARCH_DATA = "SEARCH_DATA";
+export const CLEAR_SEARCH_DATA = "CLEAR_PERSON_DATA";
+export const SEARCH_ERROR = "PERSON_ERROR";
+export const SEARCH_LOADER = "PERSON_LOADER";

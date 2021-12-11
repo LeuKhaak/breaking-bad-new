@@ -31,9 +31,7 @@ function Card({
           <div className={styles.inf}>
             <span
               className={
-                personData.status === "Deceased"
-                  ? styles.deceased
-                  : styles.alive
+                personData.status === "Alive" ? styles.alive : styles.deceased
               }
             >
               {personData.status.toLowerCase()}
@@ -62,7 +60,14 @@ function Card({
       </div>
     </section>
   ) : (
-    ""
+    <div className={styles.card}>
+      <div className={styles.noCharacter}>
+        <Error notice="Invalid character name!" />
+        <span className={styles.instruction}>
+          Go back to the catalog and enter a different name.
+        </span>
+      </div>
+    </div>
   );
 }
 

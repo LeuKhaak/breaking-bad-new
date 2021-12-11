@@ -5,10 +5,10 @@ import Search from "src/components/molecules/Search";
 import CardList from "src/components/organisms/CardList";
 import PaginatorPlus from "src/components/organisms/PaginatorPlus";
 
-function Catalog({ createName, getData }) {
+function Catalog({ createName, characterName }) {
   return (
     <section className={styles.catalog}>
-      <Search createName={createName} getData={getData} />
+      <Search createName={createName} characterName={characterName} />
       <TitleAndToggle />
       <CardList />
       <PaginatorPlus />

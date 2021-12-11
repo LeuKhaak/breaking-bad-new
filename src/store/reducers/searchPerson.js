@@ -1,4 +1,10 @@
-import { SEARCH_NAME, SEARCH_DATA } from "../actionTypes/actionTypesNames";
+import {
+  SEARCH_NAME,
+  SEARCH_DATA,
+  CLEAR_SEARCH_DATA,
+  SEARCH_LOADER,
+  SEARCH_ERROR,
+} from "../actionTypes/actionTypesNames";
 
 const initialState = {
   searchName: "",
@@ -19,21 +25,21 @@ function searchPerson(state = initialState, action) {
         ...state,
         searchData: action.searchData,
       };
-    //case CLEAR_PERSON_DATA:
-    //  return {
-    //    ...state,
-    //    personData: "",
-    //  };
-    //case PERSON_LOADER:
-    //  return {
-    //    ...state,
-    //    loader: action.loader,
-    //  };
-    //case PERSON_ERROR:
-    //  return {
-    //    ...state,
-    //    getError: action,
-    //  };
+    case CLEAR_SEARCH_DATA:
+      return {
+        ...state,
+        searchData: "",
+      };
+    case SEARCH_LOADER:
+      return {
+        ...state,
+        searchLoader: action.searchLoader,
+      };
+    case SEARCH_ERROR:
+      return {
+        ...state,
+        searchError: action,
+      };
     default:
       return state;
   }

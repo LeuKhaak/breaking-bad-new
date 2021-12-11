@@ -2,8 +2,9 @@ import React from "react";
 import * as styles from "./styles.module.scss";
 import Btn from "src/components/atoms/Btn";
 import loup from "src/assets/icons/loupe.svg";
+import { Link } from "react-router-dom";
 
-function Search({ createName, getData }) {
+function Search({ createName, characterName }) {
   return (
     <div className={styles.container}>
       <div className={styles.search}>
@@ -13,16 +14,10 @@ function Search({ createName, getData }) {
           name="search-card"
           placeholder="search"
           onChange={(event) => createName(event.target.value)}
-          onKeyPress={(event) => {
-            if (event.key === "Enter") getData();
-          }}
         />
-        <Btn
-          btnText="Find"
-          icon={loup}
-          //btnStyle={}
-          onClick={getData}
-        />
+        <Link to={`/person/${characterName}`} className={styles.link}>
+          <Btn btnText="Find" icon={loup} />
+        </Link>
       </div>
     </div>
   );
