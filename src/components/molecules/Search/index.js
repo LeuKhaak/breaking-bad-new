@@ -4,7 +4,7 @@ import Btn from "src/components/atoms/Btn";
 import loup from "src/assets/icons/loupe.svg";
 import { Link } from "react-router-dom";
 
-function Search({ createName, characterName }) {
+function Search({ createName, characterName, searchCharacter }) {
   return (
     <div className={styles.container}>
       <div className={styles.search}>
@@ -14,6 +14,7 @@ function Search({ createName, characterName }) {
           name="search-card"
           placeholder="search"
           onChange={(event) => createName(event.target.value)}
+          onKeyPress={(event) => searchCharacter(event)}
         />
         <Link to={`/person/${characterName}`} className={styles.link}>
           <Btn btnText="Find" icon={loup} />
