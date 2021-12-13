@@ -1,0 +1,39 @@
+@import "../../../assets/styles/styles.scss";
+.container {
+  @include content;
+  @include tabletSmall {
+    width: 95%;
+  }
+  .search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 50rem;
+    height: 3.5rem;
+    background: $white;
+    box-shadow: 0 0.25rem 0.5rem $shadowDark;
+    border-radius: 0.25rem;
+    margin: 0 auto 0 auto;
+    @include mobileSmall {
+      flex-direction: column;
+      align-items: start;
+      padding-top: 0.5rem;
+    }
+    .searchInput {
+      width: calc(100% - 7.5rem);
+      border: none;
+      outline: none;
+      font-size: 1.25rem;
+      padding-left: 1.25rem;
+      @include mobileSmall {
+        width: calc(100% - 1.5rem);
+      }
+      &::placeholder {
+        font-size: 1rem;
+      }
+    }
+    .link {
+      text-decoration: none;
+    }
+  }
+}

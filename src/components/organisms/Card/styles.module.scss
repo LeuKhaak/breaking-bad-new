@@ -100,4 +100,12 @@
       }
     }
   }
+  .noCharacter {
+    text-align: center;
+    .instruction {
+      display: block;
+      font-size: 1rem;
+      color: $mainFontColor;
+    }
+  }
 }
