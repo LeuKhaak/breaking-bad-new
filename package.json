@@ -9,6 +9,9 @@
     "axios": "^0.24.0",
     "classnames": "^2.3.1",
     "node-sass": "^4.14.1",
+    "jest": "^27.4.3",
+    "jest-environment-jsdom": "^27.4.3",
+    "jest-resolve": "^27.4.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-lazy-load-image-component": "^1.5.1",
@@ -24,8 +27,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "test": "jest",
+    "test:coverage": "jest --coverage"
   },
   "eslintConfig": {
     "extends": [
@@ -46,7 +50,28 @@
     ]
   },
   "devDependencies": {
+    "@babel/preset-flow": "^7.16.0",
+    "@babel/preset-react": "^7.16.0",
     "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.6"
+    "enzyme-adapter-react-16": "^1.15.6",
+    "enzyme-to-json": "^3.6.2",
+    "jsdom": "19.0.0",
+    "jsdom-global": "3.0.2"
+  },
+  "jest": {
+    "verbose": true,
+    "clearMocks": true,
+    "collectCoverage": true,
+    "setupFilesAfterEnv": [
+      "./setupTests.js"
+    ],
+    "snapshotSerializers": [
+      "./node_modules/enzyme-to-json/serializer"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|scss)$": "identity-obj-proxy"
+    },
+    "testEnvironment": "jsdom"
   }
 }
