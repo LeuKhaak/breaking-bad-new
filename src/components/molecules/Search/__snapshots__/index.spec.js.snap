@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search testing: is Search rendered 1`] = `
+<div>
+  <div>
+    <input
+      name="search-card"
+      onChange={[Function]}
+      onKeyPress={[Function]}
+      placeholder="search"
+      type="text"
+    />
+    <Link
+      to="/person/undefined"
+    >
+      <Btn
+        btnText="Find"
+        icon="test-file-stub"
+      />
+    </Link>
+  </div>
+</div>
+`;

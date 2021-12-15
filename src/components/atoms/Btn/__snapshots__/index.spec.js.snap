@@ -74,6 +74,29 @@ exports[`Btn testing: is Btn has backgroung 1`] = `
 </button>
 `;
 
+exports[`Btn testing: is Btn hasn\`t backgroung 1`] = `
+<button
+  className=""
+  onClick={[Function]}
+  style={
+    Object {
+      "background": "none",
+    }
+  }
+>
+  <img
+    alt="#"
+    src="./test.jpg"
+    style={
+      Object {
+        "fill": "red",
+      }
+    }
+  />
+  <span />
+</button>
+`;
+
 exports[`Btn testing: is Btn not displayed 1`] = `
 <button
   className=""

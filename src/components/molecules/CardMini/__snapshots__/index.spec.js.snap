@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardMini testing: is CardMini contain img 1`] = `
+<div
+  className=""
+>
+  <div>
+    <div>
+      <img
+        alt="#"
+        src="./test.jpg"
+      />
+    </div>
+    <div>
+      <span>
+        alive
+      </span>
+      <h3 />
+      <span />
+    </div>
+  </div>
+</div>
+`;

@@ -9,7 +9,7 @@ function CardList({ getError, loader, cardsData, tiles }) {
   return getError ? (
     <Error notice="The request failed!" />
   ) : loader ? (
-    <Loader />
+    <Loader loader />
   ) : (
     <div className={styles.cardList}>
       <div className={styles.container}>

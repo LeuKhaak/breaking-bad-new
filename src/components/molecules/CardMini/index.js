@@ -12,7 +12,7 @@ function CardMini({ birthday, name, status, img, tiles }) {
         </div>
         <div className={styles.inf}>
           <span className={status === "Alive" ? styles.alive : styles.deceased}>
-            {status.toLowerCase()}
+            {status && status.toLowerCase()}
           </span>
           <h3 className={styles.name}>{name}</h3>
           <span className={styles.birthday}>{birthday}</span>

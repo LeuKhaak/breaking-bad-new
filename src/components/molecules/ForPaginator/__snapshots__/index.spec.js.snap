@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ForPaginator testing: is ForPaginator contain items 1`] = `
+<div>
+  <span>
+    Show cards:
+  </span>
+  <div
+    id="b5"
+    key="5"
+  >
+    <Btn
+      arg={5}
+      btnStyle="pageNumber"
+      btnText={5}
+    />
+  </div>
+  <div
+    id="b10"
+    key="10"
+  >
+    <Btn
+      arg={10}
+      btnStyle="pageNumberChecked"
+      btnText={10}
+    />
+  </div>
+  <div
+    id="b15"
+    key="15"
+  >
+    <Btn
+      arg={15}
+      btnStyle="pageNumber"
+      btnText={15}
+    />
+  </div>
+  <div
+    id="b20"
+    key="20"
+  >
+    <Btn
+      arg={20}
+      btnStyle="pageNumber"
+      btnText={20}
+    />
+  </div>
+</div>
+`;

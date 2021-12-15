@@ -55,6 +55,14 @@ describe("Btn testing:", () => {
     expect(component).toMatchSnapshot();
   });
 
+  test("is Btn hasn`t backgroung", () => {
+    component = setComponent({
+      icon: "./test.jpg",
+      location: "/person/1",
+    });
+    expect(component).toMatchSnapshot();
+  });
+
   test("onClickFunc", () => {
     component = setComponent({
       onClick: onClick,

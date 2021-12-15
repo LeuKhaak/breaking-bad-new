@@ -1,6 +1,6 @@
 import React from "react";
 import * as styles from "./styles.module.scss";
-import Btn from "src/components/atoms/Btn";
+import Btn from "../../../components/atoms/Btn";
 import loup from "src/assets/icons/loupe.svg";
 import { Link } from "react-router-dom";
 
