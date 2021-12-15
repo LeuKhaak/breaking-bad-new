@@ -3,8 +3,8 @@ import { shallow } from "enzyme";
 import Search from ".";
 
 let component = null;
-const onChange = jest.fn();
-const onKeyPress = jest.fn();
+//const onChange = jest.fn();
+//const onKeyPress = jest.fn();
 //const value = "test";
 //const key = "Enter";
 const setComponent = (props) => shallow(<Search {...props} />);
@@ -18,21 +18,21 @@ describe("Search testing:", () => {
     expect(component).toMatchSnapshot();
   });
 
-  test("onChangeFunc", () => {
-    component = setComponent({
-      createName: onChange,
-      searchCharacter: onKeyPress,
-    });
-    component.find("input").simulate("change", { target: { value: "S" } });
-    expect(onChange).toBeCalledWith(
-      expect.objectContaining({ target: { value: "S" } })
-    );
-    //.expect("S");
-    //component.find("input").simulate("change", { target: { value: "k" } });
-    //expect(onChange).toBeCalledWith(expect("k"));
-    //component.find("input").simulate("keydown", { keyCode: 13 });
-    //expect(onKeyPress).toBeCalledWith(expect.objectContaining(expect("Sk")));
-  });
+  //test("onChangeFunc", () => {
+  //  component = setComponent({
+  //    createName: onChange,
+  //    searchCharacter: onKeyPress,
+  //  });
+  //  component.find("input").simulate("change", { target: { value: "S" } });
+  //  expect(onChange).toBeCalledWith(
+  //    expect.objectContaining({ target: { value: "S" } })
+  //  );
+  //.expect("S");
+  //component.find("input").simulate("change", { target: { value: "k" } });
+  //expect(onChange).toBeCalledWith(expect("k"));
+  //component.find("input").simulate("keydown", { keyCode: 13 });
+  //expect(onKeyPress).toBeCalledWith(expect.objectContaining(expect("Sk")));
+  //});
 
   //test("onKeyPressFunc", () => {
   //  component = setComponent({

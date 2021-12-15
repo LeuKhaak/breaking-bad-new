@@ -1,9 +1,9 @@
 import { React } from "react";
 import * as styles from "./styles.module.scss";
-import Loader from "src/components/atoms/Loader";
-import Error from "src/components/atoms/Error";
+import Loader from "../../../components/atoms/Loader";
+import Error from "../../../components/atoms/Error";
 import { Link } from "react-router-dom";
-import Btn from "src/components/atoms/Btn";
+import Btn from "../../../components/atoms/Btn";
 import arrow from "src/assets/icons/arrow.svg";
 
 function Card({
@@ -13,13 +13,14 @@ function Card({
   quoteData,
   quoteError,
   quoteLoader,
+  indicator,
 }) {
   return getError ? (
     <Error notice="Character not found!" />
   ) : loader ? (
     <Loader />
   ) : personData ? (
-    <section className={styles.card}>
+    <div className={styles.card}>
       <div className={styles.container}>
         <Link to="/catalog" className={styles.link}>
           <Btn btnText="Back to catalog" icon={arrow} />
@@ -58,7 +59,7 @@ function Card({
           </div>
         </div>
       </div>
-    </section>
+    </div>
   ) : (
     <div className={styles.card}>
       <div className={styles.noCharacter}>
