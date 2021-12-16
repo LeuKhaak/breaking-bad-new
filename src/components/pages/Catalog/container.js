@@ -1,7 +1,7 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { createSearchName } from "src/store/actions/personSearch";
+import { createSearchName } from "../../../store/actions/personSearch";
 import Catalog from "./component";
 
 function CatalogContainer() {
