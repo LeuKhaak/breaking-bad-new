@@ -1,6 +1,10 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { selectPage, prevPage, nextPage } from "src/store/actions/paginator";
+import {
+  selectPage,
+  prevPage,
+  nextPage,
+} from "../../../store/actions/paginator";
 import Paginator from "./component";
 
 function PaginatorContainer() {

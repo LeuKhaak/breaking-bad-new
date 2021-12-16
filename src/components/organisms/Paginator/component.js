@@ -1,6 +1,6 @@
 import React from "react";
 import * as styles from "./styles.module.scss";
-import Btn from "src/components/atoms/Btn";
+import Btn from "../../../components/atoms/Btn";
 import arrow from "src/assets/icons/arrow.svg";
 
 function Paginator({
@@ -16,6 +16,7 @@ function Paginator({
   followingPage,
   nextTriad,
 }) {
+  console.log(pages);
   return (
     <div className={styles.numbers}>
       <div className={styles.pages}>

@@ -1,7 +1,7 @@
 import React from "react";
 import * as styles from "./styles.module.scss";
-import Paginator from "src/components/organisms/Paginator";
-import ForPaginator from "src/components/molecules/ForPaginator";
+import Paginator from "../../../components/organisms/Paginator";
+import ForPaginator from "../../../components/molecules/ForPaginator";
 
 function PaginatorPlus({ loader, perPage, amounts, changeLimitPages }) {
   return (

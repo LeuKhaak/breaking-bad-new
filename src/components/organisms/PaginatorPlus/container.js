@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { changeLimit } from "src/store/actions/paginator";
+import { changeLimit } from "../../../store/actions/paginator";
 import PaginatorPlus from "./component";
 
 function PaginatorPlusContainer() {
