@@ -28,7 +28,6 @@ function CardList({ getError, loader, cardsData, tiles }) {
               >
                 <CardMini
                   tiles={tiles}
-                  id={element.id}
                   name={element.name}
                   birthday={element.birthday}
                   img={element.img}

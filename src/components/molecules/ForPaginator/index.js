@@ -8,8 +8,9 @@ function ForPaginator({ perPage, amounts, changeLimitPages }) {
       <span className={styles.show}>Show cards:</span>
       {amounts &&
         amounts.map((el) => (
-          <div id={"b" + el} key={el} className={styles.pages}>
+          <div key={el} className={styles.pages}>
             <Btn
+              id={"b" + el}
               btnText={el}
               btnStyle={el === perPage ? "pageNumberChecked" : "pageNumber"}
               onClick={changeLimitPages}

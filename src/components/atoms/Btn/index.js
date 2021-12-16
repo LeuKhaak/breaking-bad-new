@@ -13,6 +13,7 @@ const Btn = ({
   onClick,
   arg,
   arg2,
+  id,
 }) => {
   const classBtn = cn(
     styles.btn,
@@ -26,6 +27,7 @@ const Btn = ({
   return (
     <button
       className={classBtn}
+      id={id}
       style={
         location && location !== "/catalog"
           ? { background: "none" }

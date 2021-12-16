@@ -2,7 +2,7 @@ import React from "react";
 import * as styles from "./styles.module.scss";
 import cn from "classnames";
 
-function CardMini({ birthday, name, status, img, tiles }) {
+function CardMini({ id, birthday, name, status, img, tiles }) {
   const classCardMini = cn(styles.card, !tiles && styles.cardLine);
   return (
     <div className={classCardMini}>

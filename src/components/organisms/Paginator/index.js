@@ -44,6 +44,7 @@ function Paginator({
           ))}
       </div>
       <Btn
+        id="prev"
         icon={arrow}
         btnStyle="pageNumber"
         onClick={goPrevPage}
@@ -51,6 +52,7 @@ function Paginator({
         arg2={prevTriad}
       />
       <Btn
+        id="next"
         icon={arrow}
         btnStyle="buttonNext"
         onClick={goNextPage}
