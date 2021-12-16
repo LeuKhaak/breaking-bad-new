@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Main testing: is Main rendered 1`] = `
+<div>
+  <t
+    afterLoad={[Function]}
+    alt="#"
+    beforeLoad={[Function]}
+    delayMethod="throttle"
+    delayTime={300}
+    effect=""
+    placeholderSrc={null}
+    src="test-file-stub"
+    threshold={100}
+    useIntersectionObserver={true}
+    visibleByDefault={false}
+    wrapperClassName=""
+  />
+</div>
+`;

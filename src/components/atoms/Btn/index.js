@@ -29,7 +29,9 @@ const Btn = ({
       style={
         location && location !== "/catalog"
           ? { background: "none" }
-          : { display: disp }
+          : disp
+          ? { display: disp }
+          : {}
       }
       onClick={() => {
         onClick1();

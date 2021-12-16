@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PaginatorPlus testing: is PaginatorPlus not rendered 1`] = `
+<div
+  style={
+    Object {
+      "display": "none",
+    }
+  }
+>
+  <Paginator />
+  <ForPaginator
+    loader={true}
+  />
+</div>
+`;
+
+exports[`PaginatorPlus testing: is PaginatorPlus rendered 1`] = `
+<div
+  style={Object {}}
+>
+  <Paginator />
+  <ForPaginator
+    loader={false}
+  />
+</div>
+`;

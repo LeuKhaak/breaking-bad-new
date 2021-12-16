@@ -1,0 +1,114 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Btn testing: is Btn contain icon 1`] = `
+<button
+  className=""
+  onClick={[Function]}
+  style={Object {}}
+>
+  <img
+    alt="#"
+    src="./test.jpg"
+    style={
+      Object {
+        "fill": "red",
+      }
+    }
+  />
+  <span />
+</button>
+`;
+
+exports[`Btn testing: is Btn contain nothing 1`] = `
+<button
+  className=""
+  onClick={[Function]}
+  style={Object {}}
+>
+  <span />
+</button>
+`;
+
+exports[`Btn testing: is Btn contain text 1`] = `
+<button
+  className=""
+  onClick={[Function]}
+  style={Object {}}
+>
+  <span>
+    testText
+  </span>
+</button>
+`;
+
+exports[`Btn testing: is Btn contain text and icon 1`] = `
+<button
+  className=""
+  onClick={[Function]}
+  style={Object {}}
+>
+  <img
+    alt="#"
+    src="./test.jpg"
+    style={
+      Object {
+        "fill": "red",
+      }
+    }
+  />
+  <span>
+    testText
+  </span>
+</button>
+`;
+
+exports[`Btn testing: is Btn has backgroung 1`] = `
+<button
+  className=""
+  onClick={[Function]}
+  style={Object {}}
+>
+  <span>
+    testText
+  </span>
+</button>
+`;
+
+exports[`Btn testing: is Btn hasn\`t backgroung 1`] = `
+<button
+  className=""
+  onClick={[Function]}
+  style={
+    Object {
+      "background": "none",
+    }
+  }
+>
+  <img
+    alt="#"
+    src="./test.jpg"
+    style={
+      Object {
+        "fill": "red",
+      }
+    }
+  />
+  <span />
+</button>
+`;
+
+exports[`Btn testing: is Btn not displayed 1`] = `
+<button
+  className=""
+  onClick={[Function]}
+  style={
+    Object {
+      "display": "none",
+    }
+  }
+>
+  <span>
+    testText
+  </span>
+</button>
+`;

@@ -1,15 +1,15 @@
 import React from "react";
 import * as styles from "./styles.module.scss";
-import CardMini from "src/components/molecules/CardMini";
-import Loader from "src/components/atoms/Loader";
-import Error from "src/components/atoms/Error";
+import CardMini from "../../../components/molecules/CardMini";
+import Loader from "../../../components/atoms/Loader";
+import Error from "../../../components/atoms/Error";
 import { Link } from "react-router-dom";
 
 function CardList({ getError, loader, cardsData, tiles }) {
   return getError ? (
     <Error notice="The request failed!" />
   ) : loader ? (
-    <Loader />
+    <Loader loader />
   ) : (
     <div className={styles.cardList}>
       <div className={styles.container}>

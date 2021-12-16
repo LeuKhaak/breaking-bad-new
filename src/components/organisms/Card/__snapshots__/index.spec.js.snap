@@ -1,0 +1,169 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card testing: is Card rendered with status Alive 1`] = `
+<div>
+  <div>
+    <Link
+      to="/catalog"
+    >
+      <Btn
+        btnText="Back to catalog"
+        icon="test-file-stub"
+      />
+    </Link>
+    <div>
+      <div>
+        <img
+          alt="#"
+        />
+      </div>
+      <div>
+        <span>
+          alive
+        </span>
+        <h3>
+          Jeck
+        </h3>
+        <span>
+          Birthday:
+          <span />
+        </span>
+        <span>
+          Niсk-name:
+          <span />
+        </span>
+        <span>
+          <span>
+            Quote:
+          </span>
+          <span />
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Card testing: is Card rendered with status Deceased 1`] = `
+<div>
+  <div>
+    <Link
+      to="/catalog"
+    >
+      <Btn
+        btnText="Back to catalog"
+        icon="test-file-stub"
+      />
+    </Link>
+    <div>
+      <div>
+        <img
+          alt="#"
+        />
+      </div>
+      <div>
+        <span>
+          deceased
+        </span>
+        <h3>
+          Ann
+        </h3>
+        <span>
+          Birthday:
+          <span />
+        </span>
+        <span>
+          Niсk-name:
+          <span />
+        </span>
+        <span>
+          <span>
+            Quote:
+          </span>
+          <span />
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Card testing: is Error shown 1`] = `
+<Error
+  notice="Character not found!"
+/>
+`;
+
+exports[`Card testing: is Loader shown 1`] = `<Loader />`;
+
+exports[`Card testing: is quote rendered 1`] = `
+<div>
+  <div>
+    <Link
+      to="/catalog"
+    >
+      <Btn
+        btnText="Back to catalog"
+        icon="test-file-stub"
+      />
+    </Link>
+    <div>
+      <div>
+        <img
+          alt="#"
+        />
+      </div>
+      <div>
+        <span>
+          alive
+        </span>
+        <h3>
+          Jeck
+        </h3>
+        <span>
+          Birthday:
+          <span />
+        </span>
+        <span>
+          Niсk-name:
+          <span />
+        </span>
+        <span>
+          <span>
+            Quote:
+          </span>
+          <span>
+            Test quote
+          </span>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Card testing: is quoteError shown 1`] = `
+<div>
+  <div>
+    <Error
+      notice="Invalid character name!"
+    />
+    <span>
+      Go back to the catalog and enter a different name.
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Card testing: is quoteLoader shown 1`] = `
+<div>
+  <div>
+    <Error
+      notice="Invalid character name!"
+    />
+    <span>
+      Go back to the catalog and enter a different name.
+    </span>
+  </div>
+</div>
+`;

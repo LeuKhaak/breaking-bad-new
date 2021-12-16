@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Error testing: is Error contain nothing 1`] = `<div />`;
+
+exports[`Error testing: is Error contain text 1`] = `
+<div>
+  Error
+</div>
+`;
