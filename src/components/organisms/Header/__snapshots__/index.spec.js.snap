@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header testing: is Header rendered 1`] = `
+<header>
+  <div>
+    <Link
+      to="/"
+    >
+      <img
+        alt="#"
+        src="test-file-stub"
+      />
+    </Link>
+    <Link
+      to="/catalog"
+    >
+      <Btn
+        btnStyle="toCatalog"
+        btnText="Catalog"
+        icon="test-file-stub"
+        location="/"
+      />
+    </Link>
+  </div>
+</header>
+`;

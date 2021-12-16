@@ -1,6 +1,6 @@
 import React from "react";
 import { shallow } from "enzyme";
-import Paginator from "./component";
+import Paginator from "./";
 
 let component = null;
 const setComponent = (props) => shallow(<Paginator {...props} />);

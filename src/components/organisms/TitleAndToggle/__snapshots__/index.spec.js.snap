@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TitleAndToggle testing: is TitleAndToggle rendered with active lines 1`] = `
+<div>
+  <h3>
+    Catalog
+  </h3>
+  <div>
+    <Btn
+      arg={false}
+      btnStyle="toggle"
+      icon="test-file-stub"
+    />
+    <Btn
+      arg={true}
+      btnStyle="toggle"
+      icon="test-file-stub"
+    />
+  </div>
+</div>
+`;
+
+exports[`TitleAndToggle testing: is TitleAndToggle rendered with active tiles 1`] = `
+<div>
+  <h3>
+    Catalog
+  </h3>
+  <div>
+    <Btn
+      arg={false}
+      btnStyle="toggle"
+      icon="test-file-stub"
+    />
+    <Btn
+      arg={true}
+      btnStyle="toggle"
+      icon="test-file-stub"
+    />
+  </div>
+</div>
+`;

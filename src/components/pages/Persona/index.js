@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "src/components/organisms/Card/index";
+import Card from "../../../components/organisms/Card/index";
 
 function Persona() {
   return <Card />;

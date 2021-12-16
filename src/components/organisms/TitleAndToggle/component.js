@@ -1,6 +1,6 @@
 import React from "react";
 import * as styles from "./styles.module.scss";
-import Btn from "src/components/atoms/Btn/index";
+import Btn from "../../../components/atoms/Btn/index";
 import lines from "src/assets/icons/lines.svg";
 import tiles from "src/assets/icons/tiles.svg";
 import lines2 from "src/assets/icons/lines2.svg";

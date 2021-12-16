@@ -8,7 +8,7 @@ exports[`PaginatorPlus testing: is PaginatorPlus not rendered 1`] = `
     }
   }
 >
-  <PaginatorContainer />
+  <Paginator />
   <ForPaginator
     loader={true}
   />
@@ -19,7 +19,7 @@ exports[`PaginatorPlus testing: is PaginatorPlus rendered 1`] = `
 <div
   style={Object {}}
 >
-  <PaginatorContainer />
+  <Paginator />
   <ForPaginator
     loader={false}
   />
