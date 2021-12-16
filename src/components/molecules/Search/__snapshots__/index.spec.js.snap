@@ -11,7 +11,7 @@ exports[`Search testing: is Search rendered 1`] = `
       type="text"
     />
     <Link
-      to="/person/undefined"
+      to="/person/Test name"
     >
       <Btn
         btnText="Find"

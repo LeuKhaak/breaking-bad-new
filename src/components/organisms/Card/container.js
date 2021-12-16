@@ -55,7 +55,6 @@ function CardContainer() {
       personData={indicator ? personData : characterData && characterData[0]}
       getError={indicator ? getError : searchError}
       loader={indicator ? loader : searchLoader}
-      indicator={indicator}
     />
   );
 }

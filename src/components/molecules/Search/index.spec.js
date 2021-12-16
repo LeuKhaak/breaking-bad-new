@@ -3,10 +3,8 @@ import { shallow } from "enzyme";
 import Search from ".";
 
 let component = null;
-//const onChange = jest.fn();
-//const onKeyPress = jest.fn();
-//const value = "test";
-//const key = "Enter";
+const onChange = jest.fn();
+const onKeyPress = jest.fn();
 const setComponent = (props) => shallow(<Search {...props} />);
 beforeEach(() => {
   component = setComponent();
@@ -14,34 +12,25 @@ beforeEach(() => {
 
 describe("Search testing:", () => {
   test("is Search rendered", () => {
-    component = setComponent({});
+    component = setComponent({
+      characterName: "Test name",
+    });
     expect(component).toMatchSnapshot();
   });
 
-  //test("onChangeFunc", () => {
-  //  component = setComponent({
-  //    createName: onChange,
-  //    searchCharacter: onKeyPress,
-  //  });
-  //  component.find("input").simulate("change", { target: { value: "S" } });
-  //  expect(onChange).toBeCalledWith(
-  //    expect.objectContaining({ target: { value: "S" } })
-  //  );
-  //.expect("S");
-  //component.find("input").simulate("change", { target: { value: "k" } });
-  //expect(onChange).toBeCalledWith(expect("k"));
-  //component.find("input").simulate("keydown", { keyCode: 13 });
-  //expect(onKeyPress).toBeCalledWith(expect.objectContaining(expect("Sk")));
-  //});
+  test("onChangeFunc", () => {
+    component = setComponent({
+      createName: onChange,
+    });
+    component.find("input").simulate("change", { target: { value: "S" } });
+    expect(onChange).toHaveBeenCalled();
+  });
 
-  //test("onKeyPressFunc", () => {
-  //  component = setComponent({
-  //    onKeyPress: searchCharacter,
-  //    icon: "./test.jpg",
-  //  });
-  //  component.find("input").simulate("keypress", { key, value });
-  //  expect(searchCharacter).toBeCalledWith(
-  //    expect.objectContaining({ key, value })
-  //  );
-  //});
+  test("onKeyPressFunc", () => {
+    component = setComponent({
+      searchCharacter: onKeyPress,
+    });
+    component.find("input").simulate("keypress", { key: "Enter", value: "Sk" });
+    expect(onKeyPress).toHaveBeenCalled();
+  });
 });

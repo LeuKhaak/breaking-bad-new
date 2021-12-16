@@ -1,4 +1,4 @@
-import { React } from "react";
+import React from "react";
 import * as styles from "./styles.module.scss";
 import Loader from "../../../components/atoms/Loader";
 import Error from "../../../components/atoms/Error";
@@ -13,7 +13,6 @@ function Card({
   quoteData,
   quoteError,
   quoteLoader,
-  indicator,
 }) {
   return getError ? (
     <Error notice="Character not found!" />

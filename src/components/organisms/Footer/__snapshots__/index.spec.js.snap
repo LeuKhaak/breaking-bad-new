@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer testing: is Footer rendered 1`] = `
+<footer>
+  <div>
+    <div>
+      2021
+    </div>
+    <div>
+      @autor
+    </div>
+  </div>
+</footer>
+`;

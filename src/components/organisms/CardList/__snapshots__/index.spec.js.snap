@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardList testing: is CardList rendered 1`] = `
+<div>
+  <div>
+    <div>
+      <span>
+        Status
+      </span>
+      <span>
+        Name
+      </span>
+      <span>
+        Birthday
+      </span>
+    </div>
+    <div>
+      <Link
+        key="1"
+        to="/person/1"
+      >
+        <CardMini
+          name="Bill"
+          tiles={true}
+        />
+      </Link>
+      <Link
+        key="2"
+        to="/person/2"
+      >
+        <CardMini
+          name="Cat"
+          tiles={true}
+        />
+      </Link>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`CardList testing: is Error shown 1`] = `
+<Error
+  notice="The request failed!"
+/>
+`;
+
+exports[`CardList testing: is Loader shown 1`] = `
+<Loader
+  loader={true}
+/>
+`;

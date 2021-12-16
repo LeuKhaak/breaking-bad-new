@@ -3,83 +3,78 @@ import { shallow } from "enzyme";
 import Card from "./component";
 
 let component = null;
-//const onClick = jest.fn();
 const setComponent = (props) => shallow(<Card {...props} />);
 beforeEach(() => {
   component = setComponent();
 });
 
 describe("Card testing:", () => {
-  test("is Card rendered", () => {
+  test("is Error shown", () => {
     component = setComponent({
-      //error: null,
-      //loader: false,
-      indicator: true,
+      getError: true,
+    });
+    expect(component).toMatchSnapshot();
+  });
+
+  test("is Loader shown", () => {
+    component = setComponent({
+      getError: null,
+      loader: true,
+    });
+    expect(component).toMatchSnapshot();
+  });
+
+  test("is Card rendered with status Alive", () => {
+    component = setComponent({
+      getError: null,
+      loader: false,
+      tiles: true,
       personData: {
         status: "Alive",
+        name: "Jeck",
       },
     });
     expect(component).toMatchSnapshot();
   });
 
-  //test("is Btn contain text", () => {
-  //  component = setComponent({
-  //    btnText: "testText",
-  //    btnStyle: "testStyle",
-  //  });
-  //  expect(component).toMatchSnapshot();
-  //});
+  test("is Card rendered with status Deceased", () => {
+    component = setComponent({
+      getError: null,
+      loader: false,
+      tiles: true,
+      personData: {
+        status: "Deceased",
+        name: "Ann",
+      },
+    });
+    expect(component).toMatchSnapshot();
+  });
 
-  //test("is Btn contain text and icon", () => {
-  //  component = setComponent({
-  //    icon: "./test.jpg",
-  //    btnText: "testText",
-  //    btnStyle: "testStyle",
-  //  });
-  //  expect(component).toMatchSnapshot();
-  //});
+  test("is quoteError shown", () => {
+    component = setComponent({
+      quoteError: true,
+    });
+    expect(component).toMatchSnapshot();
+  });
 
-  //test("is Btn contain nothing", () => {
-  //  expect(component).toMatchSnapshot();
-  //});
+  test("is quoteLoader shown", () => {
+    component = setComponent({
+      quoteError: null,
+      quoteLoader: true,
+    });
+    expect(component).toMatchSnapshot();
+  });
 
-  //test("is Btn not displayed", () => {
-  //  component = setComponent({
-  //    btnText: "testText",
-  //    disp: "none",
-  //  });
-  //  expect(component).toMatchSnapshot();
-  //});
-
-  //test("is Btn has backgroung", () => {
-  //  component = setComponent({
-  //    btnText: "testText",
-  //    location: "/catalog",
-  //  });
-  //  expect(component).toMatchSnapshot();
-  //});
-
-  //test("is Btn hasn`t backgroung", () => {
-  //  component = setComponent({
-  //    icon: "./test.jpg",
-  //    location: "/person/1",
-  //  });
-  //  expect(component).toMatchSnapshot();
-  //});
-
-  //test("onClickFunc", () => {
-  //  component = setComponent({
-  //    onClick: onClick,
-  //    icon: "./test.jpg",
-  //  });
-  //  component.find("button").simulate("click");
-  //  expect(onClick).toHaveBeenCalled();
-  //});
-  //test("is Btn has className", () => {
-  //  component = setComponent({
-  //    btnText: "testText",
-  //    btnStyle: "buttonNext",
-  //  });
-  //  expect(component.find("buttonNext")).toBeTruthy();
-  //});
+  test("is quote rendered", () => {
+    component = setComponent({
+      personData: {
+        status: "Alive",
+        name: "Jeck",
+      },
+      quoteError: null,
+      quoteLoader: false,
+      quoteData: "Test quote",
+    });
+    expect(component).toMatchSnapshot();
+  });
 });
