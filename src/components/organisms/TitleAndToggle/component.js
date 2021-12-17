@@ -12,12 +12,14 @@ function TitleAndToggle({ tile, changeStyles }) {
       <h3 className={styles.title}>Catalog</h3>
       <div className={styles.toggleWrapper}>
         <Btn
+          id="lines"
           btnStyle="toggle"
           icon={tile ? lines : lines2}
           onClick={changeStyles}
           arg={false}
         />
         <Btn
+          id="tiles"
           btnStyle="toggle"
           icon={tile ? tiles : tiles2}
           onClick={changeStyles}
