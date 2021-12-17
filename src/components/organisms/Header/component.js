@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import * as styles from "./styles.module.scss";
-import logo from "src/assets/images/logo.svg";
-import burger from "src/assets/icons/burger.svg";
+import logo from "../../../assets/images/logo.svg";
+import burger from "../../../assets/icons/burger.svg";
 import Btn from "../../../components/atoms/Btn";
 
 function Header({ location }) {

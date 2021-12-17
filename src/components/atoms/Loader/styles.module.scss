@@ -1,6 +1,11 @@
 @import "../../../assets/styles/styles.scss";
 .loader {
+  min-height: calc(100vh - 10rem);
   padding-top: 10rem;
   display: flex;
   justify-content: center;
+  .gif {
+    width: 10rem;
+    height: 10rem;
+  }
 }

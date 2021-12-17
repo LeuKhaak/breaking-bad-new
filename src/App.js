@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { HashRouter, Route, Switch } from "react-router-dom";
 import Main from "./components/pages/Main";
 import Catalog from "./components/pages/Catalog";
 import Persona from "./components/pages/Persona";
@@ -7,7 +7,7 @@ import Footer from "./components/organisms/Footer";
 
 function App() {
   return (
-    <Router>
+    <HashRouter>
       <>
         <Header />
         <Switch>
@@ -19,7 +19,7 @@ function App() {
         </Switch>
         <Footer />
       </>
-    </Router>
+    </HashRouter>
   );
 }
 
