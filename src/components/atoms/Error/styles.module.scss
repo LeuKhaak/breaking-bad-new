@@ -1,5 +1,6 @@
 @import "../../../assets/styles/styles.scss";
 .error {
+  min-height: calc(100vh - 10rem);
   display: flex;
   justify-content: center;
   font-size: 1.5rem;
